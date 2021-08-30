@@ -1,4 +1,4 @@
-This repo exists to outline a bug.  Unless you're trying to fix that bug, it's probably not helpful for you.
+This repo exists to outline [apache airflow issue 17901](https://github.com/apache/airflow/issues/17901).
 
 
 [The problematic DAG](increment.py) runs comands like these, each in their own task:
@@ -32,7 +32,7 @@ Tools info
 kubectl         | Client Version: v1.22.1
 ```
 
-The logs don't show anything too juicy:
+The logs don't show anything too juicy.  This task completed:
 
 **happy task.log**
 ```
@@ -48,12 +48,16 @@ The logs don't show anything too juicy:
 {local_task_job.py:261} INFO - 1 downstream tasks scheduled from follow-on schedule check
 ```
 
+This one got stuck:
+
 **sad task.log**
 ```
 {logging_mixin.py:109} INFO - command:
 {logging_mixin.py:109} INFO - kubectl run kpjgioi --rm -n freezebug --restart=Never -i --image=bash -- sleep 0.5
 {sh.py:670} INFO - <Command "/bin/sh -c 'kubectl run kpjgioi --rm -n freezebug --restart=Never -i --image=bash -- sleep 0.5'", pid 15>: process started
 ```
+
+Here's what the scheduler was thinking at the time:
 
 **scheduler.log**
 ```
@@ -74,3 +78,7 @@ The logs don't show anything too juicy:
 [04:03:47,035] {kubernetes_executor.py:208} INFO - Event: increment05.f23111a9b2a144c0a4a841bb02a101a1 is Running
 [04:05:50,186] {scheduler_job.py:1197} INFO - Resetting orphaned tasks for active dag runs
 ```
+
+Whatever gets stuck, it gets stuck between when the subprocess is launched and when it completes.
+Despite `--rm` being passed, the pod does not get deleted.
+Also, the pod appears to have completed succesfully--it's just that airflow doesn't know about that success.

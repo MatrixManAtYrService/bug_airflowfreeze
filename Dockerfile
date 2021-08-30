@@ -12,8 +12,7 @@ COPY ./config /home/airflow/.kube/config
 ENV KUBECONFIG=/home/airflow/.kube/config
 RUN chown airflow /home/airflow/.kube/config
 
-COPY good.py $AIRFLOW_HOME/dags/good.py
-COPY bad.py $AIRFLOW_HOME/dags/bad.py
+COPY increment.py $AIRFLOW_HOME/dags/increment.py
 
 
 USER airflow
