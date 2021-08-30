@@ -1,0 +1,29 @@
+*** Reading local file: /opt/airflow/logs/increment/0_4/2021-08-30T04:03:05.174490+00:00/1.log
+[2021-08-30 04:03:42,564] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: increment.0_4 2021-08-30T04:03:05.174490+00:00 [queued]>
+[2021-08-30 04:03:42,582] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: increment.0_4 2021-08-30T04:03:05.174490+00:00 [queued]>
+[2021-08-30 04:03:42,582] {taskinstance.py:1094} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-30 04:03:42,582] {taskinstance.py:1095} INFO - Starting attempt 1 of 1
+[2021-08-30 04:03:42,582] {taskinstance.py:1096} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-30 04:03:42,589] {taskinstance.py:1114} INFO - Executing <Task(_PythonDecoratedOperator): 0_4> on 2021-08-30T04:03:05.174490+00:00
+[2021-08-30 04:03:42,592] {standard_task_runner.py:52} INFO - Started process 13 to run task
+[2021-08-30 04:03:42,595] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'increment', '0_4', '2021-08-30T04:03:05.174490+00:00', '--job-id', '6', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/bad.py', '--cfg-path', '/tmp/tmp6uolmiat', '--error-file', '/tmp/tmp26g6888h']
+[2021-08-30 04:03:42,595] {standard_task_runner.py:77} INFO - Job 6: Subtask 0_4
+[2021-08-30 04:03:42,635] {logging_mixin.py:109} INFO - Running <TaskInstance: increment.0_4 2021-08-30T04:03:05.174490+00:00 [running]> on host increment04.95f89d7ad4aa4066862348711e56fd87
+[2021-08-30 04:03:42,702] {taskinstance.py:1251} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=increment
+AIRFLOW_CTX_TASK_ID=0_4
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-30T04:03:05.174490+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-30T04:03:05.174490+00:00
+[2021-08-30 04:03:42,703] {logging_mixin.py:109} INFO - command:
+[2021-08-30 04:03:42,703] {logging_mixin.py:109} INFO - kubectl run okqoklx --rm -n freezebug --restart=Never -i --image=bash -- sleep 0.4
+[2021-08-30 04:03:42,713] {sh.py:670} INFO - <Command "/bin/sh -c 'kubectl run okqoklx --rm -n freezebug --restart=Never -i --image=bash -- sleep 0.4'", pid 14>: process started
+[2021-08-30 04:03:45,074] {logging_mixin.py:109} INFO - result:
+[2021-08-30 04:03:45,074] {logging_mixin.py:109} INFO - pod "okqoklx" deleted
+[2021-08-30 04:03:45,075] {logging_mixin.py:109} INFO - 
+[2021-08-30 04:03:45,075] {python.py:151} INFO - Done. Returned value was: None
+[2021-08-30 04:03:45,088] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=increment, task_id=0_4, execution_date=20210830T040305, start_date=20210830T040342, end_date=20210830T040345
+[2021-08-30 04:03:45,133] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-08-30 04:03:45,163] {local_task_job.py:261} INFO - 1 downstream tasks scheduled from follow-on schedule check

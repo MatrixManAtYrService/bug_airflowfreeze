@@ -1,0 +1,11 @@
+docker build . -t airflow:freezebug
+docker tag airflow:freezebug 192.168.90.13:30500/airflow:freezebug
+docker push 192.168.90.13:30500/airflow:freezebug
+
+kubectl create namespace freezebug
+
+helm repo add apache-airflow https://airflow.apache.org
+helm repo update
+helm install -f values.yaml freezebug apache-airflow/airflow --namespace freezebug
+
+

@@ -1,0 +1,14 @@
+executor: KubernetesExecutor
+defaultAirflowRepository: 192.168.90.13:30500/airflow
+defaultAirflowTag: freezebug
+images:
+  airflow:
+    pullPolicy: Always
+  flower:
+    pullPolicy: Always
+  pod_template:
+    pullPolicy: Always
+logs:
+  persistence:
+    enabled: true
+    size: 1Gi

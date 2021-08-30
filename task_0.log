@@ -1,0 +1,29 @@
+*** Reading local file: /opt/airflow/logs/increment/0/2021-08-30T04:03:05.174490+00:00/1.log
+[2021-08-30 04:03:10,438] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: increment.0 2021-08-30T04:03:05.174490+00:00 [queued]>
+[2021-08-30 04:03:10,454] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: increment.0 2021-08-30T04:03:05.174490+00:00 [queued]>
+[2021-08-30 04:03:10,454] {taskinstance.py:1094} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-30 04:03:10,454] {taskinstance.py:1095} INFO - Starting attempt 1 of 1
+[2021-08-30 04:03:10,454] {taskinstance.py:1096} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-30 04:03:10,461] {taskinstance.py:1114} INFO - Executing <Task(_PythonDecoratedOperator): 0> on 2021-08-30T04:03:05.174490+00:00
+[2021-08-30 04:03:10,464] {standard_task_runner.py:52} INFO - Started process 13 to run task
+[2021-08-30 04:03:10,467] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'increment', '0', '2021-08-30T04:03:05.174490+00:00', '--job-id', '2', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/bad.py', '--cfg-path', '/tmp/tmpacg3tfg7', '--error-file', '/tmp/tmpz7e7cyt5']
+[2021-08-30 04:03:10,468] {standard_task_runner.py:77} INFO - Job 2: Subtask 0
+[2021-08-30 04:03:10,508] {logging_mixin.py:109} INFO - Running <TaskInstance: increment.0 2021-08-30T04:03:05.174490+00:00 [running]> on host increment0.152fa4fc86544314a683052e10fe3256
+[2021-08-30 04:03:10,577] {taskinstance.py:1251} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=increment
+AIRFLOW_CTX_TASK_ID=0
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-30T04:03:05.174490+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-30T04:03:05.174490+00:00
+[2021-08-30 04:03:10,577] {logging_mixin.py:109} INFO - command:
+[2021-08-30 04:03:10,577] {logging_mixin.py:109} INFO - kubectl run ldhoamk --rm -n freezebug --restart=Never -i --image=bash -- sleep 0
+[2021-08-30 04:03:10,587] {sh.py:670} INFO - <Command "/bin/sh -c 'kubectl run ldhoamk --rm -n freezebug --restart=Never -i --image=bash -- sleep 0'", pid 14>: process started
+[2021-08-30 04:03:13,009] {logging_mixin.py:109} INFO - result:
+[2021-08-30 04:03:13,010] {logging_mixin.py:109} INFO - pod "ldhoamk" deleted
+[2021-08-30 04:03:13,010] {logging_mixin.py:109} INFO - 
+[2021-08-30 04:03:13,010] {python.py:151} INFO - Done. Returned value was: None
+[2021-08-30 04:03:13,024] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=increment, task_id=0, execution_date=20210830T040305, start_date=20210830T040310, end_date=20210830T040313
+[2021-08-30 04:03:13,084] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-08-30 04:03:13,122] {local_task_job.py:261} INFO - 1 downstream tasks scheduled from follow-on schedule check

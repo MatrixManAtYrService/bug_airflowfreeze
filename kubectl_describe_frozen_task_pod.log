@@ -1,0 +1,55 @@
+Name:         kpjgioi
+Namespace:    freezebug
+Priority:     0
+Node:         choedankal/192.168.90.13
+Start Time:   Sun, 29 Aug 2021 22:03:51 -0600
+Labels:       run=kpjgioi
+Annotations:  cni.projectcalico.org/podIP: 10.1.149.52/32
+              cni.projectcalico.org/podIPs: 10.1.149.52/32
+Status:       Succeeded
+IP:           10.1.149.52
+IPs:
+  IP:  10.1.149.52
+Containers:
+  kpjgioi:
+    Container ID:  containerd://0208e53e38f0eba4c8e50145b0536035d2b545497f3159ee41e76e4897f1302e
+    Image:         bash
+    Image ID:      docker.io/library/bash@sha256:377439330211c232e90d460bac26829aacd33f407b525f271295e0460a586b52
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      sleep
+      0.5
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Sun, 29 Aug 2021 22:03:52 -0600
+      Finished:     Sun, 29 Aug 2021 22:03:53 -0600
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-9kdzq (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-9kdzq:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-9kdzq
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  9m8s  default-scheduler  Successfully assigned freezebug/kpjgioi to choedankal
+  Normal  Pulling    9m8s  kubelet            Pulling image "bash"
+  Normal  Pulled     9m7s  kubelet            Successfully pulled image "bash" in 601.075315ms
+  Normal  Created    9m7s  kubelet            Created container kpjgioi
+  Normal  Started    9m7s  kubelet            Started container kpjgioi

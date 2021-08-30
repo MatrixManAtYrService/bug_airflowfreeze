@@ -1,0 +1,232 @@
+
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2021-08-30 04:00:50,052] {scheduler_job.py:661} INFO - Starting the scheduler
+[2021-08-30 04:00:50,052] {scheduler_job.py:666} INFO - Processing each file at most -1 times
+[2021-08-30 04:00:50,083] {kubernetes_executor.py:480} INFO - Start Kubernetes executor
+[2021-08-30 04:00:50,099] {kubernetes_executor.py:126} INFO - Event: and now my watch begins starting at resource_version: 0
+[2021-08-30 04:00:50,105] {kubernetes_executor.py:451} INFO - When executor started up, found 0 queued task instances
+[2021-08-30 04:00:50,109] {manager.py:254} INFO - Launched DagFileProcessorManager with pid: 32
+[2021-08-30 04:00:50,110] {scheduler_job.py:1197} INFO - Resetting orphaned tasks for active dag runs
+[2021-08-30 04:00:50,114] {settings.py:51} INFO - Configured default timezone Timezone('UTC')
+[2021-08-30 04:03:05,395] {scheduler_job.py:353} INFO - 1 tasks up for execution:
+	<TaskInstance: increment.0 2021-08-30 04:03:05.174490+00:00 [scheduled]>
+[2021-08-30 04:03:05,397] {scheduler_job.py:382} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2021-08-30 04:03:05,397] {scheduler_job.py:410} INFO - DAG increment has 0/16 running and queued tasks
+[2021-08-30 04:03:05,398] {scheduler_job.py:475} INFO - Setting the following tasks to queued state:
+	<TaskInstance: increment.0 2021-08-30 04:03:05.174490+00:00 [scheduled]>
+[2021-08-30 04:03:05,400] {scheduler_job.py:517} INFO - Sending TaskInstanceKey(dag_id='increment', task_id='0', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 20 and queue default
+[2021-08-30 04:03:05,400] {base_executor.py:82} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'increment', '0', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py']
+[2021-08-30 04:03:05,401] {kubernetes_executor.py:504} INFO - Add task TaskInstanceKey(dag_id='increment', task_id='0', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1) with command ['airflow', 'tasks', 'run', 'increment', '0', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py'] with executor_config {}
+[2021-08-30 04:03:05,402] {kubernetes_executor.py:292} INFO - Kubernetes job is (TaskInstanceKey(dag_id='increment', task_id='0', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1), ['airflow', 'tasks', 'run', 'increment', '0', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py'], None, None)
+[2021-08-30 04:03:05,435] {scheduler_job.py:611} INFO - Executor reports execution of increment.0 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status queued for try_number 1
+[2021-08-30 04:03:05,438] {kubernetes_executor.py:147} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 had an event of type ADDED
+[2021-08-30 04:03:05,438] {kubernetes_executor.py:200} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 Pending
+[2021-08-30 04:03:05,439] {scheduler_job.py:638} INFO - Setting external_id for <TaskInstance: increment.0 2021-08-30 04:03:05.174490+00:00 [queued]> to 1
+[2021-08-30 04:03:05,448] {kubernetes_executor.py:147} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 had an event of type MODIFIED
+[2021-08-30 04:03:05,448] {kubernetes_executor.py:200} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 Pending
+[2021-08-30 04:03:05,465] {kubernetes_executor.py:147} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 had an event of type MODIFIED
+[2021-08-30 04:03:05,465] {kubernetes_executor.py:200} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 Pending
+[2021-08-30 04:03:05,965] {kubernetes_executor.py:147} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 had an event of type MODIFIED
+[2021-08-30 04:03:05,965] {kubernetes_executor.py:200} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 Pending
+[2021-08-30 04:03:06,945] {kubernetes_executor.py:147} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 had an event of type MODIFIED
+[2021-08-30 04:03:06,945] {kubernetes_executor.py:208} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 is Running
+[2021-08-30 04:03:13,435] {scheduler_job.py:353} INFO - 1 tasks up for execution:
+	<TaskInstance: increment.0_1 2021-08-30 04:03:05.174490+00:00 [scheduled]>
+[2021-08-30 04:03:13,437] {scheduler_job.py:382} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2021-08-30 04:03:13,437] {scheduler_job.py:410} INFO - DAG increment has 0/16 running and queued tasks
+[2021-08-30 04:03:13,437] {scheduler_job.py:475} INFO - Setting the following tasks to queued state:
+	<TaskInstance: increment.0_1 2021-08-30 04:03:05.174490+00:00 [scheduled]>
+[2021-08-30 04:03:13,438] {scheduler_job.py:517} INFO - Sending TaskInstanceKey(dag_id='increment', task_id='0_1', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 19 and queue default
+[2021-08-30 04:03:13,439] {base_executor.py:82} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'increment', '0_1', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py']
+[2021-08-30 04:03:13,440] {kubernetes_executor.py:504} INFO - Add task TaskInstanceKey(dag_id='increment', task_id='0_1', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1) with command ['airflow', 'tasks', 'run', 'increment', '0_1', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py'] with executor_config {}
+[2021-08-30 04:03:13,440] {kubernetes_executor.py:292} INFO - Kubernetes job is (TaskInstanceKey(dag_id='increment', task_id='0_1', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1), ['airflow', 'tasks', 'run', 'increment', '0_1', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py'], None, None)
+[2021-08-30 04:03:13,471] {scheduler_job.py:611} INFO - Executor reports execution of increment.0_1 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status queued for try_number 1
+[2021-08-30 04:03:13,471] {kubernetes_executor.py:147} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 had an event of type ADDED
+[2021-08-30 04:03:13,471] {kubernetes_executor.py:200} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 Pending
+[2021-08-30 04:03:13,476] {scheduler_job.py:638} INFO - Setting external_id for <TaskInstance: increment.0_1 2021-08-30 04:03:05.174490+00:00 [queued]> to 1
+[2021-08-30 04:03:13,479] {kubernetes_executor.py:147} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 had an event of type MODIFIED
+[2021-08-30 04:03:13,479] {kubernetes_executor.py:200} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 Pending
+[2021-08-30 04:03:13,495] {kubernetes_executor.py:147} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 had an event of type MODIFIED
+[2021-08-30 04:03:13,495] {kubernetes_executor.py:200} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 Pending
+[2021-08-30 04:03:13,957] {kubernetes_executor.py:147} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 had an event of type MODIFIED
+[2021-08-30 04:03:13,957] {kubernetes_executor.py:205} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 Succeeded
+[2021-08-30 04:03:14,030] {kubernetes_executor.py:147} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 had an event of type MODIFIED
+[2021-08-30 04:03:14,030] {kubernetes_executor.py:200} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 Pending
+[2021-08-30 04:03:14,557] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment0.152fa4fc86544314a683052e10fe3256; state: None; annotations: {'dag_id': 'increment', 'task_id': '0', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:14,558] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment0.152fa4fc86544314a683052e10fe3256', 'freezebug', '6086246') to None
+[2021-08-30 04:03:14,577] {kubernetes_executor.py:147} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 had an event of type MODIFIED
+[2021-08-30 04:03:14,577] {kubernetes_executor.py:205} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 Succeeded
+[2021-08-30 04:03:14,580] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:14,581] {scheduler_job.py:611} INFO - Executor reports execution of increment.0 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status None for try_number 1
+[2021-08-30 04:03:14,584] {kubernetes_executor.py:147} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 had an event of type DELETED
+[2021-08-30 04:03:14,584] {kubernetes_executor.py:205} INFO - Event: increment0.152fa4fc86544314a683052e10fe3256 Succeeded
+[2021-08-30 04:03:14,624] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment0.152fa4fc86544314a683052e10fe3256; state: None; annotations: {'dag_id': 'increment', 'task_id': '0', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:14,624] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment0.152fa4fc86544314a683052e10fe3256; state: None; annotations: {'dag_id': 'increment', 'task_id': '0', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:14,625] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment0.152fa4fc86544314a683052e10fe3256', 'freezebug', '6086254') to None
+[2021-08-30 04:03:14,630] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:14,630] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment0.152fa4fc86544314a683052e10fe3256', 'freezebug', '6086255') to None
+[2021-08-30 04:03:14,634] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:14,635] {scheduler_job.py:611} INFO - Executor reports execution of increment.0 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status None for try_number 1
+[2021-08-30 04:03:14,961] {kubernetes_executor.py:147} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 had an event of type MODIFIED
+[2021-08-30 04:03:14,962] {kubernetes_executor.py:208} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 is Running
+[2021-08-30 04:03:21,445] {scheduler_job.py:353} INFO - 1 tasks up for execution:
+	<TaskInstance: increment.0_2 2021-08-30 04:03:05.174490+00:00 [scheduled]>
+[2021-08-30 04:03:21,446] {scheduler_job.py:382} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2021-08-30 04:03:21,446] {scheduler_job.py:410} INFO - DAG increment has 0/16 running and queued tasks
+[2021-08-30 04:03:21,447] {scheduler_job.py:475} INFO - Setting the following tasks to queued state:
+	<TaskInstance: increment.0_2 2021-08-30 04:03:05.174490+00:00 [scheduled]>
+[2021-08-30 04:03:21,448] {scheduler_job.py:517} INFO - Sending TaskInstanceKey(dag_id='increment', task_id='0_2', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 18 and queue default
+[2021-08-30 04:03:21,448] {base_executor.py:82} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'increment', '0_2', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py']
+[2021-08-30 04:03:21,449] {kubernetes_executor.py:504} INFO - Add task TaskInstanceKey(dag_id='increment', task_id='0_2', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1) with command ['airflow', 'tasks', 'run', 'increment', '0_2', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py'] with executor_config {}
+[2021-08-30 04:03:21,450] {kubernetes_executor.py:292} INFO - Kubernetes job is (TaskInstanceKey(dag_id='increment', task_id='0_2', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1), ['airflow', 'tasks', 'run', 'increment', '0_2', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py'], None, None)
+[2021-08-30 04:03:21,479] {scheduler_job.py:611} INFO - Executor reports execution of increment.0_2 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status queued for try_number 1
+[2021-08-30 04:03:21,481] {kubernetes_executor.py:147} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 had an event of type ADDED
+[2021-08-30 04:03:21,481] {kubernetes_executor.py:200} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 Pending
+[2021-08-30 04:03:21,484] {scheduler_job.py:638} INFO - Setting external_id for <TaskInstance: increment.0_2 2021-08-30 04:03:05.174490+00:00 [queued]> to 1
+[2021-08-30 04:03:21,489] {kubernetes_executor.py:147} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 had an event of type MODIFIED
+[2021-08-30 04:03:21,489] {kubernetes_executor.py:200} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 Pending
+[2021-08-30 04:03:21,505] {kubernetes_executor.py:147} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 had an event of type MODIFIED
+[2021-08-30 04:03:21,505] {kubernetes_executor.py:200} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 Pending
+[2021-08-30 04:03:21,974] {kubernetes_executor.py:147} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 had an event of type MODIFIED
+[2021-08-30 04:03:21,974] {kubernetes_executor.py:205} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 Succeeded
+[2021-08-30 04:03:22,001] {kubernetes_executor.py:147} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 had an event of type MODIFIED
+[2021-08-30 04:03:22,001] {kubernetes_executor.py:200} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 Pending
+[2021-08-30 04:03:22,583] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment01.45dd8e0ddbde45caa5eca448caabff72; state: None; annotations: {'dag_id': 'increment', 'task_id': '0_1', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:22,584] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0_1', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment01.45dd8e0ddbde45caa5eca448caabff72', 'freezebug', '6086291') to None
+[2021-08-30 04:03:22,602] {kubernetes_executor.py:147} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 had an event of type MODIFIED
+[2021-08-30 04:03:22,603] {kubernetes_executor.py:205} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 Succeeded
+[2021-08-30 04:03:22,605] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0_1', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:22,605] {scheduler_job.py:611} INFO - Executor reports execution of increment.0_1 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status None for try_number 1
+[2021-08-30 04:03:22,609] {kubernetes_executor.py:147} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 had an event of type DELETED
+[2021-08-30 04:03:22,609] {kubernetes_executor.py:205} INFO - Event: increment01.45dd8e0ddbde45caa5eca448caabff72 Succeeded
+[2021-08-30 04:03:22,646] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment01.45dd8e0ddbde45caa5eca448caabff72; state: None; annotations: {'dag_id': 'increment', 'task_id': '0_1', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:22,646] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment01.45dd8e0ddbde45caa5eca448caabff72; state: None; annotations: {'dag_id': 'increment', 'task_id': '0_1', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:22,647] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0_1', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment01.45dd8e0ddbde45caa5eca448caabff72', 'freezebug', '6086302') to None
+[2021-08-30 04:03:22,651] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0_1', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:22,651] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0_1', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment01.45dd8e0ddbde45caa5eca448caabff72', 'freezebug', '6086303') to None
+[2021-08-30 04:03:22,655] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0_1', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:22,656] {scheduler_job.py:611} INFO - Executor reports execution of increment.0_1 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status None for try_number 1
+[2021-08-30 04:03:22,979] {kubernetes_executor.py:147} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 had an event of type MODIFIED
+[2021-08-30 04:03:22,979] {kubernetes_executor.py:208} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 is Running
+[2021-08-30 04:03:29,664] {scheduler_job.py:353} INFO - 1 tasks up for execution:
+	<TaskInstance: increment.0_3 2021-08-30 04:03:05.174490+00:00 [scheduled]>
+[2021-08-30 04:03:29,665] {scheduler_job.py:382} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2021-08-30 04:03:29,665] {scheduler_job.py:410} INFO - DAG increment has 0/16 running and queued tasks
+[2021-08-30 04:03:29,666] {scheduler_job.py:475} INFO - Setting the following tasks to queued state:
+	<TaskInstance: increment.0_3 2021-08-30 04:03:05.174490+00:00 [scheduled]>
+[2021-08-30 04:03:29,667] {scheduler_job.py:517} INFO - Sending TaskInstanceKey(dag_id='increment', task_id='0_3', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 17 and queue default
+[2021-08-30 04:03:29,667] {base_executor.py:82} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'increment', '0_3', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py']
+[2021-08-30 04:03:29,669] {kubernetes_executor.py:504} INFO - Add task TaskInstanceKey(dag_id='increment', task_id='0_3', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1) with command ['airflow', 'tasks', 'run', 'increment', '0_3', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py'] with executor_config {}
+[2021-08-30 04:03:29,670] {kubernetes_executor.py:292} INFO - Kubernetes job is (TaskInstanceKey(dag_id='increment', task_id='0_3', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1), ['airflow', 'tasks', 'run', 'increment', '0_3', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py'], None, None)
+[2021-08-30 04:03:29,698] {kubernetes_executor.py:147} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 had an event of type ADDED
+[2021-08-30 04:03:29,698] {kubernetes_executor.py:200} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 Pending
+[2021-08-30 04:03:29,698] {scheduler_job.py:611} INFO - Executor reports execution of increment.0_3 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status queued for try_number 1
+[2021-08-30 04:03:29,704] {scheduler_job.py:638} INFO - Setting external_id for <TaskInstance: increment.0_3 2021-08-30 04:03:05.174490+00:00 [queued]> to 1
+[2021-08-30 04:03:29,707] {kubernetes_executor.py:147} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 had an event of type MODIFIED
+[2021-08-30 04:03:29,707] {kubernetes_executor.py:200} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 Pending
+[2021-08-30 04:03:29,721] {kubernetes_executor.py:147} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 had an event of type MODIFIED
+[2021-08-30 04:03:29,721] {kubernetes_executor.py:200} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 Pending
+[2021-08-30 04:03:29,993] {kubernetes_executor.py:147} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 had an event of type MODIFIED
+[2021-08-30 04:03:29,994] {kubernetes_executor.py:205} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 Succeeded
+[2021-08-30 04:03:30,251] {kubernetes_executor.py:147} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 had an event of type MODIFIED
+[2021-08-30 04:03:30,252] {kubernetes_executor.py:200} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 Pending
+[2021-08-30 04:03:30,790] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment02.82ebab73074e483da198c6fb93f2fc52; state: None; annotations: {'dag_id': 'increment', 'task_id': '0_2', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:30,791] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0_2', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment02.82ebab73074e483da198c6fb93f2fc52', 'freezebug', '6086335') to None
+[2021-08-30 04:03:30,807] {kubernetes_executor.py:147} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 had an event of type MODIFIED
+[2021-08-30 04:03:30,808] {kubernetes_executor.py:205} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 Succeeded
+[2021-08-30 04:03:30,811] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0_2', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:30,812] {scheduler_job.py:611} INFO - Executor reports execution of increment.0_2 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status None for try_number 1
+[2021-08-30 04:03:30,815] {kubernetes_executor.py:147} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 had an event of type DELETED
+[2021-08-30 04:03:30,815] {kubernetes_executor.py:205} INFO - Event: increment02.82ebab73074e483da198c6fb93f2fc52 Succeeded
+[2021-08-30 04:03:30,851] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment02.82ebab73074e483da198c6fb93f2fc52; state: None; annotations: {'dag_id': 'increment', 'task_id': '0_2', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:30,852] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment02.82ebab73074e483da198c6fb93f2fc52; state: None; annotations: {'dag_id': 'increment', 'task_id': '0_2', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:30,853] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0_2', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment02.82ebab73074e483da198c6fb93f2fc52', 'freezebug', '6086348') to None
+[2021-08-30 04:03:30,857] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0_2', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:30,858] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0_2', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment02.82ebab73074e483da198c6fb93f2fc52', 'freezebug', '6086349') to None
+[2021-08-30 04:03:30,862] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0_2', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:30,862] {scheduler_job.py:611} INFO - Executor reports execution of increment.0_2 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status None for try_number 1
+[2021-08-30 04:03:30,998] {kubernetes_executor.py:147} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 had an event of type MODIFIED
+[2021-08-30 04:03:30,998] {kubernetes_executor.py:208} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 is Running
+[2021-08-30 04:03:37,683] {scheduler_job.py:353} INFO - 1 tasks up for execution:
+	<TaskInstance: increment.0_4 2021-08-30 04:03:05.174490+00:00 [scheduled]>
+[2021-08-30 04:03:37,685] {scheduler_job.py:382} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2021-08-30 04:03:37,685] {scheduler_job.py:410} INFO - DAG increment has 0/16 running and queued tasks
+[2021-08-30 04:03:37,685] {scheduler_job.py:475} INFO - Setting the following tasks to queued state:
+	<TaskInstance: increment.0_4 2021-08-30 04:03:05.174490+00:00 [scheduled]>
+[2021-08-30 04:03:37,687] {scheduler_job.py:517} INFO - Sending TaskInstanceKey(dag_id='increment', task_id='0_4', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 16 and queue default
+[2021-08-30 04:03:37,687] {base_executor.py:82} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'increment', '0_4', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py']
+[2021-08-30 04:03:37,688] {kubernetes_executor.py:504} INFO - Add task TaskInstanceKey(dag_id='increment', task_id='0_4', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1) with command ['airflow', 'tasks', 'run', 'increment', '0_4', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py'] with executor_config {}
+[2021-08-30 04:03:37,689] {kubernetes_executor.py:292} INFO - Kubernetes job is (TaskInstanceKey(dag_id='increment', task_id='0_4', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1), ['airflow', 'tasks', 'run', 'increment', '0_4', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py'], None, None)
+[2021-08-30 04:03:37,722] {scheduler_job.py:611} INFO - Executor reports execution of increment.0_4 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status queued for try_number 1
+[2021-08-30 04:03:37,722] {kubernetes_executor.py:147} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 had an event of type ADDED
+[2021-08-30 04:03:37,722] {kubernetes_executor.py:200} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 Pending
+[2021-08-30 04:03:37,727] {scheduler_job.py:638} INFO - Setting external_id for <TaskInstance: increment.0_4 2021-08-30 04:03:05.174490+00:00 [queued]> to 1
+[2021-08-30 04:03:37,730] {kubernetes_executor.py:147} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 had an event of type MODIFIED
+[2021-08-30 04:03:37,730] {kubernetes_executor.py:200} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 Pending
+[2021-08-30 04:03:37,747] {kubernetes_executor.py:147} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 had an event of type MODIFIED
+[2021-08-30 04:03:37,747] {kubernetes_executor.py:200} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 Pending
+[2021-08-30 04:03:38,011] {kubernetes_executor.py:147} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 had an event of type MODIFIED
+[2021-08-30 04:03:38,011] {kubernetes_executor.py:205} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 Succeeded
+[2021-08-30 04:03:38,260] {kubernetes_executor.py:147} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 had an event of type MODIFIED
+[2021-08-30 04:03:38,260] {kubernetes_executor.py:200} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 Pending
+[2021-08-30 04:03:38,815] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment03.4995a5a946d14d5e9360b338c1251a78; state: None; annotations: {'dag_id': 'increment', 'task_id': '0_3', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:38,816] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0_3', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment03.4995a5a946d14d5e9360b338c1251a78', 'freezebug', '6086380') to None
+[2021-08-30 04:03:38,833] {kubernetes_executor.py:147} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 had an event of type MODIFIED
+[2021-08-30 04:03:38,833] {kubernetes_executor.py:205} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 Succeeded
+[2021-08-30 04:03:38,836] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0_3', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:38,837] {scheduler_job.py:611} INFO - Executor reports execution of increment.0_3 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status None for try_number 1
+[2021-08-30 04:03:38,839] {kubernetes_executor.py:147} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 had an event of type DELETED
+[2021-08-30 04:03:38,839] {kubernetes_executor.py:205} INFO - Event: increment03.4995a5a946d14d5e9360b338c1251a78 Succeeded
+[2021-08-30 04:03:38,881] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment03.4995a5a946d14d5e9360b338c1251a78; state: None; annotations: {'dag_id': 'increment', 'task_id': '0_3', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:38,882] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment03.4995a5a946d14d5e9360b338c1251a78; state: None; annotations: {'dag_id': 'increment', 'task_id': '0_3', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:38,883] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0_3', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment03.4995a5a946d14d5e9360b338c1251a78', 'freezebug', '6086393') to None
+[2021-08-30 04:03:38,888] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0_3', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:38,888] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0_3', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment03.4995a5a946d14d5e9360b338c1251a78', 'freezebug', '6086394') to None
+[2021-08-30 04:03:38,892] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0_3', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:38,893] {scheduler_job.py:611} INFO - Executor reports execution of increment.0_3 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status None for try_number 1
+[2021-08-30 04:03:39,014] {kubernetes_executor.py:147} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 had an event of type MODIFIED
+[2021-08-30 04:03:39,014] {kubernetes_executor.py:208} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 is Running
+[2021-08-30 04:03:45,864] {scheduler_job.py:353} INFO - 1 tasks up for execution:
+	<TaskInstance: increment.0_5 2021-08-30 04:03:05.174490+00:00 [scheduled]>
+[2021-08-30 04:03:45,865] {scheduler_job.py:382} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2021-08-30 04:03:45,865] {scheduler_job.py:410} INFO - DAG increment has 0/16 running and queued tasks
+[2021-08-30 04:03:45,866] {scheduler_job.py:475} INFO - Setting the following tasks to queued state:
+	<TaskInstance: increment.0_5 2021-08-30 04:03:05.174490+00:00 [scheduled]>
+[2021-08-30 04:03:45,867] {scheduler_job.py:517} INFO - Sending TaskInstanceKey(dag_id='increment', task_id='0_5', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1) to executor with priority 15 and queue default
+[2021-08-30 04:03:45,867] {base_executor.py:82} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'increment', '0_5', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py']
+[2021-08-30 04:03:45,868] {kubernetes_executor.py:504} INFO - Add task TaskInstanceKey(dag_id='increment', task_id='0_5', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1) with command ['airflow', 'tasks', 'run', 'increment', '0_5', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py'] with executor_config {}
+[2021-08-30 04:03:45,869] {kubernetes_executor.py:292} INFO - Kubernetes job is (TaskInstanceKey(dag_id='increment', task_id='0_5', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=Timezone('UTC')), try_number=1), ['airflow', 'tasks', 'run', 'increment', '0_5', '2021-08-30T04:03:05.174490+00:00', '--local', '--pool', 'default_pool', '--subdir', '/opt/airflow/dags/bad.py'], None, None)
+[2021-08-30 04:03:45,892] {scheduler_job.py:611} INFO - Executor reports execution of increment.0_5 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status queued for try_number 1
+[2021-08-30 04:03:45,893] {kubernetes_executor.py:147} INFO - Event: increment05.f23111a9b2a144c0a4a841bb02a101a1 had an event of type ADDED
+[2021-08-30 04:03:45,893] {kubernetes_executor.py:200} INFO - Event: increment05.f23111a9b2a144c0a4a841bb02a101a1 Pending
+[2021-08-30 04:03:45,897] {scheduler_job.py:638} INFO - Setting external_id for <TaskInstance: increment.0_5 2021-08-30 04:03:05.174490+00:00 [queued]> to 1
+[2021-08-30 04:03:45,902] {kubernetes_executor.py:147} INFO - Event: increment05.f23111a9b2a144c0a4a841bb02a101a1 had an event of type MODIFIED
+[2021-08-30 04:03:45,902] {kubernetes_executor.py:200} INFO - Event: increment05.f23111a9b2a144c0a4a841bb02a101a1 Pending
+[2021-08-30 04:03:45,920] {kubernetes_executor.py:147} INFO - Event: increment05.f23111a9b2a144c0a4a841bb02a101a1 had an event of type MODIFIED
+[2021-08-30 04:03:45,920] {kubernetes_executor.py:200} INFO - Event: increment05.f23111a9b2a144c0a4a841bb02a101a1 Pending
+[2021-08-30 04:03:46,029] {kubernetes_executor.py:147} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 had an event of type MODIFIED
+[2021-08-30 04:03:46,030] {kubernetes_executor.py:205} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 Succeeded
+[2021-08-30 04:03:46,441] {kubernetes_executor.py:147} INFO - Event: increment05.f23111a9b2a144c0a4a841bb02a101a1 had an event of type MODIFIED
+[2021-08-30 04:03:46,441] {kubernetes_executor.py:200} INFO - Event: increment05.f23111a9b2a144c0a4a841bb02a101a1 Pending
+[2021-08-30 04:03:46,734] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment04.95f89d7ad4aa4066862348711e56fd87; state: None; annotations: {'dag_id': 'increment', 'task_id': '0_4', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:46,735] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0_4', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment04.95f89d7ad4aa4066862348711e56fd87', 'freezebug', '6086425') to None
+[2021-08-30 04:03:46,754] {kubernetes_executor.py:147} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 had an event of type MODIFIED
+[2021-08-30 04:03:46,755] {kubernetes_executor.py:205} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 Succeeded
+[2021-08-30 04:03:46,757] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0_4', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:46,758] {scheduler_job.py:611} INFO - Executor reports execution of increment.0_4 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status None for try_number 1
+[2021-08-30 04:03:46,762] {kubernetes_executor.py:147} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 had an event of type DELETED
+[2021-08-30 04:03:46,762] {kubernetes_executor.py:205} INFO - Event: increment04.95f89d7ad4aa4066862348711e56fd87 Succeeded
+[2021-08-30 04:03:46,812] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment04.95f89d7ad4aa4066862348711e56fd87; state: None; annotations: {'dag_id': 'increment', 'task_id': '0_4', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:46,813] {kubernetes_executor.py:368} INFO - Attempting to finish pod; pod_id: increment04.95f89d7ad4aa4066862348711e56fd87; state: None; annotations: {'dag_id': 'increment', 'task_id': '0_4', 'execution_date': '2021-08-30T04:03:05.174490+00:00', 'try_number': '1'}
+[2021-08-30 04:03:46,814] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0_4', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment04.95f89d7ad4aa4066862348711e56fd87', 'freezebug', '6086437') to None
+[2021-08-30 04:03:46,818] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0_4', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:46,818] {kubernetes_executor.py:546} INFO - Changing state of (TaskInstanceKey(dag_id='increment', task_id='0_4', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1), None, 'increment04.95f89d7ad4aa4066862348711e56fd87', 'freezebug', '6086438') to None
+[2021-08-30 04:03:46,822] {kubernetes_executor.py:631} INFO - Deleted pod: TaskInstanceKey(dag_id='increment', task_id='0_4', execution_date=datetime.datetime(2021, 8, 30, 4, 3, 5, 174490, tzinfo=tzlocal()), try_number=1) in namespace freezebug
+[2021-08-30 04:03:46,822] {scheduler_job.py:611} INFO - Executor reports execution of increment.0_4 execution_date=2021-08-30 04:03:05.174490+00:00 exited with status None for try_number 1
+[2021-08-30 04:03:47,035] {kubernetes_executor.py:147} INFO - Event: increment05.f23111a9b2a144c0a4a841bb02a101a1 had an event of type MODIFIED
+[2021-08-30 04:03:47,035] {kubernetes_executor.py:208} INFO - Event: increment05.f23111a9b2a144c0a4a841bb02a101a1 is Running
+[2021-08-30 04:05:50,186] {scheduler_job.py:1197} INFO - Resetting orphaned tasks for active dag runs

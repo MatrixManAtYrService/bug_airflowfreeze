@@ -1,0 +1,22 @@
+*** Reading local file: /opt/airflow/logs/increment/0_5/2021-08-30T04:03:05.174490+00:00/1.log
+[2021-08-30 04:03:50,850] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: increment.0_5 2021-08-30T04:03:05.174490+00:00 [queued]>
+[2021-08-30 04:03:50,858] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: increment.0_5 2021-08-30T04:03:05.174490+00:00 [queued]>
+[2021-08-30 04:03:50,858] {taskinstance.py:1094} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-30 04:03:50,858] {taskinstance.py:1095} INFO - Starting attempt 1 of 1
+[2021-08-30 04:03:50,858] {taskinstance.py:1096} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-30 04:03:50,872] {taskinstance.py:1114} INFO - Executing <Task(_PythonDecoratedOperator): 0_5> on 2021-08-30T04:03:05.174490+00:00
+[2021-08-30 04:03:50,875] {standard_task_runner.py:52} INFO - Started process 14 to run task
+[2021-08-30 04:03:50,878] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'increment', '0_5', '2021-08-30T04:03:05.174490+00:00', '--job-id', '7', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/bad.py', '--cfg-path', '/tmp/tmpnmw3hlcf', '--error-file', '/tmp/tmpn1_1761p']
+[2021-08-30 04:03:50,879] {standard_task_runner.py:77} INFO - Job 7: Subtask 0_5
+[2021-08-30 04:03:50,920] {logging_mixin.py:109} INFO - Running <TaskInstance: increment.0_5 2021-08-30T04:03:05.174490+00:00 [running]> on host increment05.f23111a9b2a144c0a4a841bb02a101a1
+[2021-08-30 04:03:50,988] {taskinstance.py:1251} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=increment
+AIRFLOW_CTX_TASK_ID=0_5
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-30T04:03:05.174490+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-30T04:03:05.174490+00:00
+[2021-08-30 04:03:50,988] {logging_mixin.py:109} INFO - command:
+[2021-08-30 04:03:50,989] {logging_mixin.py:109} INFO - kubectl run kpjgioi --rm -n freezebug --restart=Never -i --image=bash -- sleep 0.5
+[2021-08-30 04:03:50,999] {sh.py:670} INFO - <Command "/bin/sh -c 'kubectl run kpjgioi --rm -n freezebug --restart=Never -i --image=bash -- sleep 0.5'", pid 15>: process started
